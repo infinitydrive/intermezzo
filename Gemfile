@@ -20,6 +20,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'devise'
 
+gem 'carrierwave', '~> 0.10.0' #Carry muh images to the cloudz (No nudes pls)
+
+gem 'mini_magick', '~> 4.3' #Resize images by way of black magick
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
