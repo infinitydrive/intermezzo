@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :items
+  resources :charges
   root :to => "home#index"
   
   #get "/items" => "items#index" #routes to list of items for sale
