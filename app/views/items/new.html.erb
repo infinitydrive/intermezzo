@@ -1,15 +1,33 @@
-<%= render 'form', item: @item %>
-<form>
-<h1>New Listing</h1>
-  <div class="form-row align-items-center">
-  <div class="col-md-3">
-    <div class="form-group">
-      <label for="formGroupExampleInput">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+<div class="center">
+<%= form_for @item, html: { multipart: true } do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+ 
+      <ul>
+      <% @item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
-      <div class="form-group">
-        <label for="formGroupExampleInput2">Another label</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-    </div>
-  </form>
-<%= link_to 'Back', items_path %>
+  <% end %>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
