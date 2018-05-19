@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem 'stripe'
+
 gem 'devise'
 
 gem 'carrierwave', '~> 0.10.0' #Carry muh images to the cloudz (No nudes pls)

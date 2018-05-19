@@ -24,8 +24,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(params.permit(:name, :price, :description, :image))
-
+    @item = Item.create(params.require(:item).permit(:name, :price, :description, :image))
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
