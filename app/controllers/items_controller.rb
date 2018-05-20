@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @item = Item.find(params[:id])
   end
 
   # GET /items/new
@@ -25,6 +26,8 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.create(params.require(:item).permit(:name, :price, :description, :image))
+    @item.user = current_user
+
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }

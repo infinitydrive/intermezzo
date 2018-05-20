@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-    belongs_to :user, optional: true
+    belongs_to :user
     mount_uploader :image, ImageUploader
     validates_processing_of :image
 validate :image_size_validation

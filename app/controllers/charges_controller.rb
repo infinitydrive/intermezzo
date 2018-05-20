@@ -15,7 +15,7 @@ class ChargesController < ApplicationController
       redirect_to thanks_path
     rescue Stripe::CardError => e
       flash[:error] = e.message
-      redirect_to new_charge_path
+      redirect_to :root
     end
 
     def thanks
@@ -24,10 +24,10 @@ class ChargesController < ApplicationController
     private
 
       def amount_to_be_charged
-        @amount = 1000
+        @amount = 2000
       end
 
       def set_description
-        @description = "Some amazing product"
+        @description = @item.name
       end
 end
