@@ -1,23 +1,19 @@
 <p id="notice"><%= notice %></p>
 <div class="center", "body">
+
 <p>
-  <strong>Name:</strong>
+  <strong></strong>
+  <%= image_tag @item.image.page_view.url %>
+</p>
+
+<p>
+  <strong></strong>
   <%= @item.name %>
 </p>
  
 <p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-   <strong>Price:</strong>
-   <%= @item.price %>
-</p>
- 
-<p>
   <strong></strong>
-  <%= image_tag @item.image.page_view.url %>
+  <%= @item.description %>
 </p>
 
 <p>
@@ -44,5 +40,5 @@
           data-locale="auto"></script>
 <% end %>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Edit', edit_item_path(@item) if (@item.user_id == current_user) %>
 <%= link_to 'Back', items_path %>

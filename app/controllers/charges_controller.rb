@@ -12,7 +12,7 @@ class ChargesController < ApplicationController
       charge = StripeTool.create_charge(customer_id: customer.id,
                                         amount: @amount,
                                         description: 'Rails Stripe customer')
-      redirect_to thanks_path
+      redirect_to :root
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to :root
