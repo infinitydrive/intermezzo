@@ -28,6 +28,6 @@ class ChargesController < ApplicationController
       end
 
       def set_description
-        @description = @item.name
+        @description = "Purchase"
       end
 end
