@@ -12,7 +12,11 @@ The Solution:
 
 A platform for users to buy and sell secondhand luxury goods, as well as interact with one another via direct messages and a personal profile and blog that allows users to share their fashion interests.
 
+## Setup
 
+Got to https://intermezzo11.herokuapp.com/ and click the sign up link below the login button. Enter an email and password of at least 6 digits twice and you'll be taken to the homepage. There's meant to be a bunch of user stories, blogs and activities there but it is currently just a blank page. Click the 'For Sale' tab in the navbar to see all items currently available for purchase. Click an item to see it individually. From here, you can purchase the item by clicking the 'pay with card' button, which will open the stripe payment form. Fill in the form to complete the purchase. Click the 'create listing' tab in the navbar to create a new listing. Enter a value in all the fields and upload an image using the 'upload image' button. Click 'create item' to post your listing. You will be redirected to the page of the new listing, where you can view the details and edit at your leisure.
+
+## Planning
 Task management courtesy of Trello.
 https://trello.com/b/vJS1iMAj/project-pallazzo
 
