@@ -16,27 +16,10 @@ A platform for users to buy and sell secondhand luxury goods, as well as interac
 Task management courtesy of Trello.
 https://trello.com/b/vJS1iMAj/project-pallazzo
 
+### User Stories
 
+As a seller of exclusive designer brand range items, I want an easy way to sell my items quickly when they are in high demand.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As a buyer of designer brands, I want to be able to filter items by brand and item category to easily find items I am interested in purchasing.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I want to be able to edit my profile so others can see what designers I am interested in and can be notified of exclusive items when they become available.
